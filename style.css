@@ -399,8 +399,25 @@ img {
   opacity: 0.8;
 }
 
+.parallax-top {
+  background-image: url("1@2x.jpg");
+  min-height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-3 {
+  background-image: url("1.jpg");
+  min-height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .parallax {
-  background-image: url("../img/iDiLogo.png");
+  background-image: url("iDiLogo.png");
   min-height: 450px;
   background-attachment: fixed;
   background-position: center;
@@ -409,7 +426,7 @@ img {
 }
 
 .parallax-1 {
-  background-image: url("../img/counterC.png");
+  background-image: url("counterC.png");
   min-height: 450px;
   background-attachment: fixed;
   background-position-y: center;
@@ -419,7 +436,7 @@ img {
 }
 
 .parallax-2 {
-  background-image: url("../img/ipaultmb.png");
+  background-image: url("ipaultmb.png");
   min-height: 550px;
   background-attachment: fixed;
   background-position: center;
