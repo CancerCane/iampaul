@@ -240,8 +240,9 @@ img {
 /***** General style, all sections *****/
 
 .section-container {
-  margin: 0 auto;
-  padding-bottom: 80px;
+  display: flex;
+  margin: 20px;
+  padding: 30px;
 }
 
 .section-container-gray-bg {
@@ -251,7 +252,16 @@ img {
 .section-container-image-bg,
 .section-container-image-bg h2,
 .section-container-image-bg h3 {
+  float: left;
+  width: 50%;
+  padding: 40px;
   color: #fff;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .section-container-image-bg .divider-1 span {
@@ -443,10 +453,12 @@ img {
   background-repeat: no-repeat;
   background-size: auto;
 }
-#cultintro {
-  
 
+#cultintro {
+  float:left;
+  padding: 10px;
 }
+
 
 /***** Section 1 *****/
 
