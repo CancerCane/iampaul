@@ -7,7 +7,7 @@ body {
   text-align: center;
 }
 
-.ticker  {
+.ticker {
   /* Add background image */
   background-image: url("ipaultmb.png");
   /* Repeat image in x-axis  */
@@ -593,6 +593,7 @@ img {
   margin-top: 0;
   padding: 0 0 10px 0;
 }
+
 /***** Contact *****/
 .contact {
   box-sizing: border-box;
