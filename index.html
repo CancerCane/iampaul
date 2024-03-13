@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-57-precomposed.png" />
 </head>
 
-<body class="w3-sand">
+<body class="w3-sand ticker">
   <!-- Top menu -->
   <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg fixed-top">
     <div class="container">
@@ -70,7 +70,7 @@
   </nav>
 
   <!-- Top content -->
-  <div class="top-content parallax">
+  <div class="top-content parallax-top">
     <div class="inner-bg">
       <div class="container">
         <div class="row">
@@ -442,20 +442,37 @@
 
   <hr>
 
-  <!-- Contact -->
-  <div class="section-4-container section-container">
-    <div class="container parallax-3">
-      <div class="row">
-        <div class="col section-4 section-description wow fadeInLeftBig">
-          <h2>Contact Me</h2>
-          <p>
-            Currently base of operations is a 200 square foot area at home. No
-            store hours. Drop me a line or just say Hi.
-          </p>
-        </div>
-      </div>
+<!-- Contact -->
+ <div class="contact-container">
+  <div class="parallax-3">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="logo.png" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </div>
+</div>
+</div>
 
   <!-- Footer -->
   <footer class="footer-container">

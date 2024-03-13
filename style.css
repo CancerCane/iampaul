@@ -3,9 +3,26 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: #e0febe;
   line-height: 30px;
   text-align: center;
+}
+
+.ticker  {
+  /* Add background image */
+  background-image: url("ipaultmb.png");
+  /* Repeat image in x-axis  */
+  background-repeat: repeat-x;
+  /* Animate Using animation: duration 
+           timing-function iteration-count direction; */
+  animation: 30s parallel infinite linear;
+}
+
+/* timing-function */
+@keyframes parallel {
+  100% {
+    /* set background-position */
+    background-position: -5000px 20%;
+  }
 }
 
 strong {
@@ -31,7 +48,6 @@ h2 {
   margin-top: 10px;
   font-size: 25vm;
   font-weight: 300;
-  color: #555;
   line-height: 50px;
   font-style: italic;
 }
@@ -42,7 +58,7 @@ h3 {
   color: #555;
   line-height: 30px;
   font-style: italic;
-  
+
 }
 
 img {
@@ -77,13 +93,14 @@ img {
 
 .w3-card,
 .w3-card-2 {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-		0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
+
 .w3-card-4,
 .w3-hover-shadow:hover {
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
-		0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+    0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cards {
@@ -124,7 +141,7 @@ img {
 .card-title {
   font-size: 3em;
   margin: 0 0 0.6em;
-  color: #51516a;
+  color: #f0f7f8;
 }
 
 .card-thumb {
@@ -426,6 +443,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .parallax {
   background-image: url("iDiLogo.png");
   min-height: 450px;
@@ -442,7 +460,7 @@ img {
   background-position-y: center;
   background-position-x: right;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 95%;
 }
 
 .parallax-2 {
@@ -451,11 +469,11 @@ img {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
 }
 
 #cultintro {
-  float:left;
+  float: left;
   padding: 10px;
 }
 
@@ -574,6 +592,67 @@ img {
 .section-3-box h3 {
   margin-top: 0;
   padding: 0 0 10px 0;
+}
+/***** Contact *****/
+.contact {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.contact-container {
+  color: wheat;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .column,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 /***** Footer *****/
