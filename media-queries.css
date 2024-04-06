@@ -6,6 +6,8 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
+	.card .cards .contact-container { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 	
 	.navbar-expand-md .navbar-nav .nav-link { padding-left: 0.6rem; padding-right: 0.6rem; }
 	
