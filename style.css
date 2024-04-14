@@ -8,7 +8,7 @@ body {
 }
 
 /* ticker */
-.ticker-container{
+.ticker-container {
   overflow: hidden;
   white-space: nowrap;
   background-color: #f0f0f1;
@@ -81,7 +81,7 @@ img {
   max-width: 100%;
 
 }
- 
+
 
 #subject {
   height: 170px;
@@ -127,17 +127,18 @@ img {
 
 .card .w3-card-24 {
   position: absolute;
-  z-index: 2; 
+  z-index: 2;
   left: 50%;
   transform: translateX(-50%);
-  overflow: scroll; 
+  overflow: scroll;
 }
+
 .card_image {
-  position: absolute;
-  z-index: 1;  
-  width: 100%;
-height: 100%;
-object-fit: cover;
+  margin: 20px;
+  border: 5px solid #fff;
+  float: left;
+  width: 350px;
+  height: 200px;
 }
 
 
@@ -145,7 +146,7 @@ object-fit: cover;
   transform: scale(1.5);
 }
 
-  
+
 .card-header .card-footer {
   text-align: center;
   display: flexbox;
@@ -153,7 +154,7 @@ object-fit: cover;
   gap: 2em;
   padding: 2em;
   border-radius: calc(var(--curve) * 1px) 0 0 0;
-  transform: translateY(-100%); 
+  transform: translateY(-100%);
   transition: 2s ease-in-out;
 }
 
@@ -225,13 +226,15 @@ object-fit: cover;
   color: #fff;
   text-shadow: none;
 }
+
 /***** General style, all containers and parallax *****/
 
 .container, .parallax {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10%; /* This will add a 10% space on both sides */
+  padding: 0 10%;
+  /* This will add a 10% space on both sides */
 }
 
 
@@ -268,11 +271,11 @@ object-fit: cover;
   display: table;
 }
 
-#contact-container{
+#contact-container {
   text-align: center;
 }
 
-#contact-logo{
+#contact-logo {
   width: 200px;
   height: 200px;
 }
@@ -449,24 +452,27 @@ object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 }
 
 .parallax-1 {
-  display: inline-flex;
   background-image: url("counterC.png");
   min-height: 450px;
   background-attachment: fixed;
   background-position-y: center;
   background-position-x: right;
   background-repeat: no-repeat;
-  background-size: 95%;
+  background-size: cover;
   color: white;
   font-size: 17px;
 }
 
 .parallax-2 {
   background-image: url("ipaultmb.png");
-  min-height: 550px;
+  min-height: 450px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10, 10, 5, 5;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -477,7 +483,7 @@ object-fit: cover;
 
 /* Set the height and width of the quarter container */
 .or-container {
-  grid-row:span;
+  grid-row: span;
   color: #fff;
   height: 25vh;
   /* 25% of the viewport height */
@@ -513,8 +519,8 @@ object-fit: cover;
 }
 
 .section-1-box .section-1-box-icon {
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: auto;
   margin: 0 auto;
 
   background: #8542a0;
