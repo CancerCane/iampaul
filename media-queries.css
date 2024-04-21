@@ -106,7 +106,10 @@
 		padding-top: 10px;
 	}
 
-	.parallax
+	.parallax, .parallax-1, .parallax-2, .parallax-3 {
+		background-attachment: scroll;
+
+	}
 }
 
 @media (max-width: 415px) {
