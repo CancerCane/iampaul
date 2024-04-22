@@ -1,51 +1,32 @@
-
-function scroll_to(clicked_link, nav_height) {
-	var element_class = clicked_link.attr('href').replace('#', '.');
-	var scroll_to = 0;
-	if(element_class != '.top-content') {
-		element_class += '-container';
-		scroll_to = $(element_class).offset().top - nav_height;
-	}
-	if($(window).scrollTop() != scroll_to) {
-		$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+function scrollToElement(target, navHeight) {
+const $target = $(target);
+  const targetOffsetTop = $target.offset().top - navHeight;
+  if ($target.hasClass('top-content') || $(window).scrollTop() !== targetOffsetTop) {
+    $('html, body').stop().animate({ scrollTop: targetOffsetTop }, 1000);
 	}
 }
 
-
-jQuery(document).ready(function() {
-	
-	/*
-	    Navigation
-	*/
-	$('a.scroll-link').on('click', function(e) {
+$(document).ready(() => {
+  // Navigation click handling
+  $('a.scroll-link').on('click', (e) => {
 		e.preventDefault();
-		scroll_to($(this), $('nav').outerHeight());
+    scrollToElement($(e.target.hash), $('nav').outerHeight());
 	});
-	// toggle "navbar-no-bg" class
-	$('.top-content .text').waypoint(function() {
+
+  // Toggle navbar background class based on scroll position
+  $('.top-content .text').waypoint(() => {
 		$('nav').toggleClass('navbar-no-bg');
 	});
 	
-    /*
-        Background slideshow
-    
-    $('.top-content').backstretch("1.jpg");
-    $('.section-4-container').backstretch("1.jpg");
-    */
-    /*
-	    Wow
-	*/
+  // Initialize WOW.js for animations
 	new WOW().init();
     
-    /*
-	    Search form
-	*/
-	$('.navbar-search-button .search-button').on('click', function(e){
+  // Search form interaction
+  $('.navbar-search-button .search-button').on('click', (e) => {
 		e.preventDefault();
-		$(this).blur();
+    $(e.target).blur();
 		$('.navbar-menu-items').toggleClass('disabled fadeIn animated');
 		$('.navbar-search-form').toggleClass('disabled fadeInLeft animated');
 		$('.navbar-search-form input.search').val('').focus();
 	});
-	
 });
