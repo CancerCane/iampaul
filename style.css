@@ -460,6 +460,8 @@ img {
 }
 
 .parallax {
+  display: grid;
+  grid-template-columns: 4fr;
   background-image: url("blkroseBkg.png");
   min-height: 450px;
   background-attachment: fixed;
@@ -493,6 +495,31 @@ img {
   background-size: contain;
 }
 
+.side-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Default to single column */
+  gap: 20px;
+  grid-template-areas: "sidebar";
+}
+
+@media screen and (min-width: 768px) {
+  .side-container {
+    grid-template-columns: 1fr 3fr;
+    /* Split into two columns */
+  }
+}
+
+.sidebar {
+  background-color: #f2f2f2;
+  padding: 20px;
+  float: right;
+}
+
+.content {
+  padding: 20px;
+}
+
 
 
 /* Set the height and width of the quarter container */
@@ -517,7 +544,7 @@ img {
 }
 
 /* Optional styling for the content inside the container */
-.or-container .content {
+.or-container {
   padding: 10px;
   /* Add some padding to the content */
 }
