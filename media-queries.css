@@ -7,9 +7,7 @@
 		line-height: 60px;
 	}
 
-	.parallax, .parallax-1, .parallax-2, .parallax-3 {
-		background-attachment: scroll;
-	}
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
