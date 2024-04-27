@@ -1,21 +1,10 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   margin: 10px 10px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-
-}
-
-ul {
-  list-style: none;
 }
 
 /* ticker */
@@ -129,7 +118,7 @@ img {
 /* cards  */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 550px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   gap: 2em;
   margin: 2rem 5vw;
   padding: 0;
@@ -137,7 +126,7 @@ img {
 }
 
 .card .w3-card-24 {
-  position: relative;
+  position: absolute;
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);
@@ -145,10 +134,10 @@ img {
 }
 
 .card_image {
-  margin: 10px;
+  margin: 20px;
   border: 2.5px solid silver;
-  float: none;
-  width: 250px;
+  float: left;
+  width: 350px;
   height: 200px;
 }
 
@@ -160,7 +149,7 @@ img {
 
 .card-header .card-footer {
   text-align: center;
-  display: grid;
+  display: flexbox;
   align-items: center;
   gap: 2em;
   padding: 2em;
@@ -170,10 +159,9 @@ img {
 }
 
 .card-title {
-  font-size: 1em;
+  font-size: 3em;
   margin: 0 0 0.6em;
-  color: #333;
-
+  color: #f0f7f8;
 }
 
 .card-thumb {
@@ -242,7 +230,7 @@ img {
 
 /***** General style, Parent containers and parallax *****/
 
-.container .parallax .parallax-1 .parallax-3 .parallax-2 .parallax-top {
+.container .parallax {
   width: 100%;
   max-width: 1200px;
   margin-left: auto;
@@ -256,12 +244,12 @@ img {
 
 
 .section-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
   margin: 20px;
   padding: 30px;
-  background-color: khaki;
+  background-color: ;
   border: 1px solid #ccc;
   overflow: hidden;
 }
@@ -460,8 +448,6 @@ img {
 }
 
 .parallax {
-  display: grid;
-  grid-template-columns: 4fr;
   background-image: url("blkroseBkg.png");
   min-height: 450px;
   background-attachment: fixed;
@@ -469,21 +455,6 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-
-}
-
-.parallax-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
 }
 
 .parallax-1 {
@@ -510,42 +481,6 @@ img {
   background-size: contain;
 }
 
-.side-container {
-  display: flex;
-  flex-flow: row;
-  /* Default to single column */
-  gap: 20px;
-  grid-template-areas: "sidebar";
-}
-
-@media screen and (min-width: 768px) {
-  .side-container {
-    grid-template-columns: 1fr 3fr;
-    /* Split into two columns */
-  }
-}
-
-.sidebar {
-  background-color: blue;
-  padding: 20px;
-  float: none;
-}
-
-.side-item .content {
-  background-color: #f2f2f2;
-  border: 1px solid:black;
-  padding: 20px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.column {
-  flex: 1;
-}
-
 
 
 /* Set the height and width of the quarter container */
@@ -570,7 +505,7 @@ img {
 }
 
 /* Optional styling for the content inside the container */
-.or-container {
+.or-container .content {
   padding: 10px;
   /* Add some padding to the content */
 }
@@ -753,12 +688,18 @@ input[type=submit]:hover {
   clear: both;
 }
 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
 
+  .column,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
 /***** Footer *****/
 
 footer {
   padding: 40px 0;
 }
-
-/*** utilities ***/
