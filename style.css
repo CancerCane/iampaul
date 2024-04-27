@@ -245,11 +245,11 @@ img {
 
 .section-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: flex-start;
   margin: 20px;
   padding: 30px;
-  background-color: ;
+  background-image: url("background-maroon-gold.png");
   border: 1px solid #ccc;
   overflow: hidden;
 }
