@@ -18,6 +18,7 @@ main {
 body {
     padding: 0.5rem;  
     overflow: auto;
+    color: black;
 }
 
 
@@ -118,13 +119,13 @@ p {
     text-align: center;
   }
   
-  /* img CSS */
-  img.responsive-img {
-  max-width: 50%;
-  height: auto;
-  float: left;
-  margin-right: 1rem;
-  }
+ /* img CSS */
+img.responsive-img {
+max-width: 50%;
+height: 15em;
+float: left;
+margin-right: 1rem;
+}
   
 
 .logo {
