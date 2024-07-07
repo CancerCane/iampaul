@@ -635,7 +635,7 @@ img {
   /* IE6-9 */
 
   font-size: 28px;
-  color: #fff;
+  color: #ffffff30;
   line-height: 60px;
   text-align: center;
   -moz-border-radius: 50%;
@@ -713,5 +713,5 @@ input[type=submit]:hover {
 /***** Footer *****/
 
 footer {
-  padding: 40px 0;
+  /* padding: 10px 10px; */
 }

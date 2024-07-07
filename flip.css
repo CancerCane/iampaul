@@ -11,6 +11,21 @@ html {
     padding: 10px;
 }
 
+#logo {
+color: #5d6767;
+}
+
+#logo:hover {
+color: #fff;
+}
+
+
+#logo2 {
+/* color: #5d6767; */
+color: #fff;
+}
+
+
 .text-center {
     text-align: center;
 }
@@ -29,7 +44,7 @@ html {
     grid-gap: s5px;
     justify-content: space-evenly;
     padding: 35px 15px;
-    max-width: 1200px; */
+    max-width: 1200px; 
 }
 
 @media screen and (min-width:1380px) {
@@ -138,10 +153,30 @@ html {
 }
 
 .flip-box-img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* height: 170px; */
     width: 100%;
     min-height: 170px;
     object-fit: cover;
     margin-top: 25px;
+}
+#flip-img-1 {
+    background-image: url('blkroseBkg.png');
+    object-position: 0px 0px;
+}
+#flip-img-2 {
+    background-image: url('black-vig-pattern.jpg');
+    object-position: 0px -170px;
+}
+#flip-img-3 {
+    background-image: url('bluegrade.jpg');
+    object-position: 0px -340px;
+}
+#flip-img-4 {
+    background-image: url('bluegrade.jpg');
+    object-position: 0px -510px;
 }
 
 .flip-box-button {
